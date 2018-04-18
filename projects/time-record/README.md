@@ -22,3 +22,9 @@ time
 |. .  
 |________________________ concurrency
 ```
+
+# Assets
+
+- `Dockerfile`: a recipe for [`otiai10/bwa`](https://hub.docker.com/r/otiai10/bwa/) on which BWA works
+- `gen_tasks.py`: only to generate messy CSV files, which I don't wanna include git repository
+- `driver.sh`: the main driver for this test, hit `./driver.sh` to show help message
