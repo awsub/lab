@@ -11,13 +11,18 @@ def main():
 
 def create(row_count):
     proj_dir = os.path.dirname(os.path.realpath(__file__))
+
+    task_dir = os.path.join(proj_dir, "tasks")
+    if not os.path.exists(task_dir):
+        os.mkdir(task_dir)
+
     template = "%(dir)s/tasks/bwa-mem.%(rows)d.csv"
     file_name = template % {'dir': proj_dir, 'rows': row_count}
     if os.path.exists(file_name):
         return
     with open(file_name, 'w') as f:
         write(f, _header, _row, row_count)
-    print file_name
+    print(file_name)
 
 def write(f, headerer, rower, count):
     rows = [headerer()]
