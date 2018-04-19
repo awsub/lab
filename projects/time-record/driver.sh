@@ -23,10 +23,10 @@ awsub \
     --script ${CFD}/bwa-mem.sh \
     --tasks ${CFD}/tasks/bwa-mem.${SAMPLE_COUNT}.csv \
     --image otiai10/bwa \
-    --concurrency 16 \
+    --concurrency ${SAMPLE_COUNT} \
     --shared REFERENCE=s3://awsub/resources/reference/GRCh37 \
     --env REFFILE=GRCh37.fa \
-    --env CASE=m4.2xlarge-x${SAMPLE_COUNT} \
+    --env CASE=m4.2xlarge-x`printf %03d ${SAMPLE_COUNT}` \
     --aws-ec2-instance-type m4.2xlarge \
     --aws-iam-instance-profile awsubtest \
     --aws-shared-instance-type ${SHARED_SPEC} \
