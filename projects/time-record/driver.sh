@@ -27,7 +27,7 @@ awsub \
     --shared REFERENCE=s3://awsub/resources/reference/GRCh37 \
     --env REFFILE=GRCh37.fa \
     --env CASE=m4.2xlarge-x`printf %03d ${SAMPLE_COUNT}` \
-    --aws-ec2-instance-type m4.2xlarge \
+    --aws-ec2-instance-type m4.large \
     --aws-iam-instance-profile awsubtest \
     --aws-shared-instance-type ${SHARED_SPEC} \
     --verbose
