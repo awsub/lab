@@ -1,7 +1,4 @@
-#!/bin/sh
-
-# Let it fail if anything fail.
-set -e
+#!/bin/bash
 
 # Let it fail if undefined variable is referenced.
 set -u
@@ -18,6 +15,9 @@ CFD=$(cd $(dirname $0) && pwd)
 SHARED_SPEC=$1
 SAMPLE_COUNT=$2
 
+# Please remain log files EVEN IF awsub command failed!!
+set +e
+
 set -v ### Show what command is really issued ###
 awsub \
     --script ${CFD}/bwa-mem.sh \
@@ -30,4 +30,7 @@ awsub \
     --aws-ec2-instance-type m4.large \
     --aws-iam-instance-profile awsubtest \
     --aws-shared-instance-type ${SHARED_SPEC} \
-    --verbose
+    --verbose \
+    1>${CFD}/stdout.log 2>${CFD}/stderr.log ; echo $? >${CFD}/exitcode.log
+
+echo "DONE: `date`"
