@@ -15,7 +15,7 @@ BUCKET_PATH="s3://awsub/verification/STAR-measurement"
 function compile_logs_for_each_case() {
   SPEC=${1}
   SAMPLE=${2}
-  CASE="${SPEC}-x`printf %03d ${SAMPLE}`"
+  CASE="${SPEC}-x`printf %02d ${SAMPLE}`"
 
   echo ${CASE}
   fetch
@@ -29,15 +29,19 @@ function fetch() {
 }
 
 function gather() {
-  cat ${CFD}/results/${CASE}/*.log | grep Real | awk '{print $4}' > ${CFD}/results/${CASE}/dataset
+  for f in `ls ${CFD}/results/${CASE}/*.stdout.log`; do
+    START=`cat ${f} | grep 'started STAR run' | awk '{print $1" "$2" "$3}'`
+    FINISH=`cat ${f} | grep 'finished successfully' | awk '{print $1" "$2" "$3}'`
+    echo "${START},${FINISH}" >> ${CFD}/results/${CASE}/dataset
+  done
 }
 
 function compile() {
-  R --vanilla --args ${SPEC} ${SAMPLE} < ${CFD}/compile.R 1>/dev/null
+  LANG=C R --quiet --vanilla --args ${SPEC} ${SAMPLE} < ${CFD}/compile.R 1>/dev/null
 }
 
 function figure_all() {
-  R --vanilla < ${CFD}/figure.R 1>/dev/null
+  R --quiet --vanilla < ${CFD}/figure.R 1>/dev/null
 }
 
 function main() {
