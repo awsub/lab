@@ -1,0 +1,11 @@
+awsub \
+    --script ../../BWA-measurement/bwa-mem.sh \
+    --tasks ${CFD}/tasks/bwa-mem.${SAMPLE_COUNT}.csv \
+    --tasks ./bwa-mem.32.csv \
+    --image otiai10/bwa \
+    --concurrency 64 \
+    --env REFFILE=GRCh37.fa \
+    --env CASE=32 \
+    --aws-ec2-instance-type m4.large \
+    --aws-iam-instance-profile awsubtest \
+    --verbose
