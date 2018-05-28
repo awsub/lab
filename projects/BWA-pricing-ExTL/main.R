@@ -65,8 +65,14 @@ if (!require("ggplot2")) {
 
 errors <- aes(ymin = min, ymax = max)
 
-g <- ggplot(results, aes(x=concurrency, y=avg, colour=instance_type)) + geom_line(size=1) + geom_point(shape=22, size=3)
-g <- g + scale_colour_brewer(palette="Set2") + scale_x_log10(breaks=c(1,2,4,8,16,32,64,128)) + scale_y_continuous(breaks=seq(0,5,by=0.2))
-g <- g + xlab("#instances") + ylab("Price ($)") + geom_errorbar(errors, width = 0.2) 
+g <- ggplot(results, aes(x=concurrency, y=avg, colour=instance_type)) +
+  geom_line(size = 0.5) +
+  geom_point(size = 1) +
+  scale_colour_brewer(palette="Set1") +
+  scale_x_log10(breaks=c(1,2,4,8,16,32,64,128)) +
+  scale_y_continuous(breaks=seq(0,5,by=0.2)) +
+  theme_bw() +
+  theme(legend.position = "bottom") +
+  labs(x = "Number of instances", y = "Price ($)", colour = "Instance type")
 
-ggsave("figure.png")
+ggsave("figure.png", width = 15, height = 15, units = "cm", dpi = 600)
