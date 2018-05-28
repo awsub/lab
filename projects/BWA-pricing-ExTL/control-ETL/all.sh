@@ -17,3 +17,6 @@ aws s3 cp --recursive s3://awsub/verification/BWA-on-ETL ./results
 
 # Create real time data set
 cat results/32/*.log | grep "Real time" | awk '{print $4}' > results/dataset
+
+# Reference file size
+aws s3 ls s3://awsub/resources/reference/GRCh37/ | awk '{s += $3} END {print s}' > referencesize

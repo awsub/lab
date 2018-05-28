@@ -1,0 +1,7 @@
+instance_type,price
+m4.large,0.129
+m4.xlarge,0.258
+m4.2xlarge,0.516
+m4.4xlarge,1.032
+m4.10xlarge,2.58
+m4.16xlarge,4.128
