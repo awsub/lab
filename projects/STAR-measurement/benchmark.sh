@@ -26,8 +26,8 @@ awsub \
     --shared REFERENCE=s3://awsub/resources/reference/GRCh37.STAR-2.5.2a \
     --env CASE=${SHARED_SPEC}-x`printf %02d ${SAMPLE_COUNT}` \
     --aws-ec2-instance-type m4.2xlarge \
-    --aws-iam-instance-profile awsubtest \
     --aws-shared-instance-type ${SHARED_SPEC} \
+    --disk-size 128 \
     --verbose
     # 1>${CFD}/stdout.log 2>${CFD}/stderr.log ; echo $? >${CFD}/exitcode.log
 

@@ -6,7 +6,7 @@ import os
 import csv
 
 def main():
-    for n in range(0, 5):
+    for n in range(0, 7):
         create(row_count=(2**n))
 
 def create(row_count):
@@ -41,8 +41,8 @@ def _header():
 def _row(index):
     return [
         str(index),
-        's3://awsub/examples/STAR/samples/MCF-7/sequence1.txt',
-        's3://awsub/examples/STAR/samples/MCF-7/sequence2.txt',
+        's3://awsub/resources/samples/MCF7/G41726.MCF7.5_1.fastq',
+        's3://awsub/resources/samples/MCF7/G41726.MCF7.5_2.fastq',
         's3://awsub/verification/STAR-measurement'
     ]
 
