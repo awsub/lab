@@ -11,8 +11,8 @@ Hiromu OCHIAI - National Cancer Center Japan
 
 # Cluster
 
-- not everyone can use HPC
-- it's a hard work to build and maintain clusters on cloud
+- Not everyone can use HPC
+- It's a hard work to build and maintain clusters on cloud
 
 ---
 
@@ -35,7 +35,7 @@ Hiromu OCHIAI - National Cancer Center Japan
   --aws-instance-type m4.2xlarge
 ```
 
-// figure here
+// 図
 
 ---
 
@@ -45,13 +45,15 @@ Hiromu OCHIAI - National Cancer Center Japan
   - Network cost
   - Instance cost
 
+// 図
+
 ---
 
 # Suggestion: Extended ETL
 
 Extended ETL data processing model
 
-// figure here
+// 図
 
 ---
 
@@ -66,4 +68,17 @@ Extended ETL data processing model
 + --shared REFERENCE=s3://bucket/path/to/reference
 ```
 
-// figure here
+---
+
+# More on the poster
+
+about...
+
+- Google Cloud, Microsoft Azure, OpenStack and more
+- Common Workflow Language (CWL)
+- Execution Protocol and Security Groups
+- etc
+
+Come to poster **#55**, and any feedback is welcome!
+
+https://github.com/otiai10/awsub
