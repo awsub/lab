@@ -6,7 +6,7 @@
 
 | \ | 1 | 2 | 4 | 8 | 16 | 32 | 64 |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| m4.2xlarge | | | | | | | |
-| m4.4xlarge | | | | | | | |
-| m4.10xlarge | | | | | | | |
-| m4.16xlarge | | | | | | | |
+| m4.2xlarge  | x | x | x | x | x | x | x |
+| m4.4xlarge  | x | x | x | x | x | x | x |
+| m4.10xlarge | x | x | x | x | x | x | x |
+| m4.16xlarge | x | x | x | x | x | x | x |
