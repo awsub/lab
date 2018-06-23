@@ -1,0 +1,17 @@
+--env INDEX,--input-recursive REFERENCE,--input INPUT1,--input INPUT2,--output-recursive OUTDIR
+0, s3://awsub/resources/reference/GRCh37.STAR-2.5.2a,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_1.fastq,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_2.fastq,s3://awsub/verification/STAR-on-ETL
+1, s3://awsub/resources/reference/GRCh37.STAR-2.5.2a,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_1.fastq,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_2.fastq,s3://awsub/verification/STAR-on-ETL
+2, s3://awsub/resources/reference/GRCh37.STAR-2.5.2a,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_1.fastq,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_2.fastq,s3://awsub/verification/STAR-on-ETL
+3, s3://awsub/resources/reference/GRCh37.STAR-2.5.2a,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_1.fastq,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_2.fastq,s3://awsub/verification/STAR-on-ETL
+4, s3://awsub/resources/reference/GRCh37.STAR-2.5.2a,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_1.fastq,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_2.fastq,s3://awsub/verification/STAR-on-ETL
+5, s3://awsub/resources/reference/GRCh37.STAR-2.5.2a,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_1.fastq,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_2.fastq,s3://awsub/verification/STAR-on-ETL
+6, s3://awsub/resources/reference/GRCh37.STAR-2.5.2a,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_1.fastq,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_2.fastq,s3://awsub/verification/STAR-on-ETL
+7, s3://awsub/resources/reference/GRCh37.STAR-2.5.2a,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_1.fastq,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_2.fastq,s3://awsub/verification/STAR-on-ETL
+8, s3://awsub/resources/reference/GRCh37.STAR-2.5.2a,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_1.fastq,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_2.fastq,s3://awsub/verification/STAR-on-ETL
+9, s3://awsub/resources/reference/GRCh37.STAR-2.5.2a,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_1.fastq,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_2.fastq,s3://awsub/verification/STAR-on-ETL
+10,s3://awsub/resources/reference/GRCh37.STAR-2.5.2a,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_1.fastq,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_2.fastq,s3://awsub/verification/STAR-on-ETL
+11,s3://awsub/resources/reference/GRCh37.STAR-2.5.2a,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_1.fastq,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_2.fastq,s3://awsub/verification/STAR-on-ETL
+12,s3://awsub/resources/reference/GRCh37.STAR-2.5.2a,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_1.fastq,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_2.fastq,s3://awsub/verification/STAR-on-ETL
+13,s3://awsub/resources/reference/GRCh37.STAR-2.5.2a,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_1.fastq,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_2.fastq,s3://awsub/verification/STAR-on-ETL
+14,s3://awsub/resources/reference/GRCh37.STAR-2.5.2a,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_1.fastq,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_2.fastq,s3://awsub/verification/STAR-on-ETL
+15,s3://awsub/resources/reference/GRCh37.STAR-2.5.2a,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_1.fastq,s3://awsub/resources/samples/MCF7/G41726.MCF7.5_2.fastq,s3://awsub/verification/STAR-on-ETL
