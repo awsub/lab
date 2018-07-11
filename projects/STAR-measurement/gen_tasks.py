@@ -41,9 +41,9 @@ def _header():
 def _row(index):
     return [
         str(index),
-        's3://awsub/resources/samples/MCF7/G41726.MCF7.5_1.fastq',
-        's3://awsub/resources/samples/MCF7/G41726.MCF7.5_2.fastq',
-        's3://awsub/verification/STAR-measurement'
+        's3://hotsub/resources/samples/MCF7/G41726.MCF7.5_1.fastq',
+        's3://hotsub/resources/samples/MCF7/G41726.MCF7.5_2.fastq',
+        's3://hotsub/verification/STAR-measurement'
     ]
 
 if __name__ == '__main__':

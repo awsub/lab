@@ -3,7 +3,7 @@
 An Alternative Way for Genome Analysis on Cloud
 ===
 
-## ETL, ExTL, and introduction of its engine: `awsub`
+## ETL, ExTL, and introduction of its engine: `hotsub`
 
 Hiromu OCHIAI - National Cancer Center Japan
 
@@ -83,7 +83,7 @@ and more
 
 ---
 
-# Do it with `awsub`!
+# Do it with `hotsub`!
 
 ---
 
@@ -155,14 +155,14 @@ and more
 
 ---
 
-# by using `awsub`
+# by using `hotsub`
 
 <div style="display:flex;align-items:center;">
   <div style="flex:2;">
 
 
 ```sh
-$ awsub \
+$ hotsub \
   --tasks  ./my-samples.csv \
   --script ./my-workflow.sh \
   --image  otiai10/STAR-alignment # any Docker image
@@ -251,14 +251,14 @@ $ awsub \
 
 ---
 
-# ExTL by using `awsub`
+# ExTL by using `hotsub`
 
 <div style="display:flex;align-items:center;">
   <div style="flex:2;">
 
 
 ```diff
-$ awsub \
+$ hotsub \
   --tasks  ./my-samples.csv \
   --script ./my-workflow.sh \
   --image  otiai10/STAR-alignment \
@@ -281,7 +281,7 @@ $ awsub \
   - **"On-demand ETL on Cloud"**
 - Huge common data can be a problem of "ETL on Cloud"
 - **"Extended ETL"** (ExTL)
-- Working Example Implementation of ExTL: <span style="font-size:1.4em;font-weight:bold">`awsub`</span>
+- Working Example Implementation of ExTL: <span style="font-size:1.4em;font-weight:bold">`hotsub`</span>
 
 ---
 
@@ -300,4 +300,4 @@ about
 
 Come to poster <span style="font-size:1.8em">**B29**</span>, and any feedback is welcome!
 
-https://github.com/otiai10/awsub
+https://github.com/otiai10/hotsub

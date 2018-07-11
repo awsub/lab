@@ -15,15 +15,15 @@ CFD=$(cd $(dirname $0) && pwd)
 SHARED_SPEC=$1
 SAMPLE_COUNT=$2
 
-# Please remain log files EVEN IF awsub command failed!!
+# Please remain log files EVEN IF hotsub command failed!!
 set +e
 
 set -v ### Show what command is really issued ###
-awsub \
+hotsub \
     --script ${CFD}/workflow.sh \
     --tasks ${CFD}/tasks/STAR.${SAMPLE_COUNT}.csv \
     --image friend1ws/star-alignment \
-    --shared REFERENCE=s3://awsub/resources/reference/GRCh37.STAR-2.5.2a \
+    --shared REFERENCE=s3://hotsub/resources/reference/GRCh37.STAR-2.5.2a \
     --env CASE=${SHARED_SPEC}-x`printf %02d ${SAMPLE_COUNT}` \
     --aws-ec2-instance-type m4.2xlarge \
     --aws-shared-instance-type ${SHARED_SPEC} \

@@ -10,7 +10,7 @@ CFD=$(cd $(dirname $0) && pwd)
 
 SHARED_INSTANCE_SPECS=(m4.2xlarge m4.4xlarge m4.10xlarge m4.16xlarge)
 SAMPLE_COUNT=(1 2 4 8 16 32 64)
-BUCKET_PATH="s3://awsub/verification/STAR-measurement"
+BUCKET_PATH="s3://hotsub/verification/STAR-measurement"
 
 function compile_logs_for_each_case() {
   SPEC=${1}

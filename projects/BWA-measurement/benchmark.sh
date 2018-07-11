@@ -15,20 +15,19 @@ CFD=$(cd $(dirname $0) && pwd)
 SHARED_SPEC=$1
 SAMPLE_COUNT=$2
 
-# Please remain log files EVEN IF awsub command failed!!
+# Please remain log files EVEN IF hotsub command failed!!
 set +e
 
 set -v ### Show what command is really issued ###
-awsub \
+hotsub \
     --script ${CFD}/bwa-mem.sh \
     --tasks ${CFD}/tasks/bwa-mem.${SAMPLE_COUNT}.csv \
     --image otiai10/bwa \
     --concurrency 64 \
-    --shared REFERENCE=s3://awsub/resources/reference/GRCh37 \
+    --shared REFERENCE=s3://hotsub/resources/reference/GRCh37 \
     --env REFFILE=GRCh37.fa \
     --env CASE=${SHARED_SPEC}-x`printf %03d ${SAMPLE_COUNT}` \
     --aws-ec2-instance-type m4.large \
-    --aws-iam-instance-profile awsubtest \
     --aws-shared-instance-type ${SHARED_SPEC} \
     --verbose \
     1>${CFD}/stdout.log 2>${CFD}/stderr.log ; echo $? >${CFD}/exitcode.log

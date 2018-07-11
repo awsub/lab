@@ -41,9 +41,9 @@ def _header():
 def _row(index):
     return [
         str(index),
-        's3://awsub/resources/samples/5929/control/sequence1000_1.fastq',
-        's3://awsub/resources/samples/5929/control/sequence1000_2.fastq',
-        's3://awsub/verification/time-record/bwa'
+        's3://hotsub/resources/samples/5929/control/sequence1000_1.fastq',
+        's3://hotsub/resources/samples/5929/control/sequence1000_2.fastq',
+        's3://hotsub/verification/time-record/bwa'
     ]
 
 if __name__ == '__main__':
